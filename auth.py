@@ -1,6 +1,6 @@
-Autenticação:
+#Autenticação:
 
-Para garantir a segurança, suas credenciais da API (chave e segredo) não devem ser codificadas diretamente no código. Em vez disso, use variáveis de ambiente.
+#Para garantir a segurança, suas credenciais da API (chave e segredo) não devem ser codificadas diretamente no código. Em vez disso, use variáveis de ambiente.
 
 import os
 import ccxt
