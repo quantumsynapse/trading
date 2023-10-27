@@ -86,6 +86,8 @@ Interface básica para visualização do saldo e execução de ordens.
 Use o comando pwd no $ do linux para verificar se estar na pasta de usuario local, em geral /home/<nome_de_usuario/ (área do projeto) 
 Note: Observe que todo o codigo abaixo deve rodar dentro da pasta /home/<nome_de_usuario>/trading/trading. 
 
+(Bernardo - segunda aula comeca aqui...) 
+
 Etapa 1: 
 1.1. Instalação de dependências:
 
@@ -95,10 +97,35 @@ pip install virtualenv
 virtualenv venv
 source venv/bin/activate  # No Windows, use: venv\Scripts\activate
 
+1.2. Configuração do repositório Git:
+Inicie um novo repositório Git e configure o .gitignore:
+git init
+echo "venv" > .gitignore
+echo "*.pyc" >> .gitignore
 
+1.3. Configuração do ambiente virtual Python:
 
+Instale as bibliotecas necessárias:
+pip install ccxt flask
 
+2. Desenvolvimento da integração básica com uma exchange:
+2.1. Autenticação:
 
+Para garantir a segurança, suas credenciais da API (chave e segredo) não devem ser codificadas diretamente no código. Em vez disso, use variáveis de ambiente.
+
+import os
+import ccxt
+
+API_KEY = os.environ.get('BINANCE_API_KEY')
+API_SECRET = os.environ.get('BINANCE_API_SECRET')
+
+if not API_KEY or not API_SECRET:
+    raise ValueError("API credentials not set!")
+
+exchange = ccxt.binance({
+    'apiKey': API_KEY,
+    'secret': API_SECRET,
+})
 
 
 
