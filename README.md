@@ -54,7 +54,46 @@ Implementação de chamadas para obter dados de mercado (ex.: preços, volumes).
 Implementação de funcionalidades para enviar ordens de compra e venda.
 Tratamento de possíveis erros e limitações das APIs (ex.: limites de requisições por minuto).
    
+######################################################################################################################################################################################################################################
 
+3. Ferramentas e Tecnologias:
+Linguagem de programação: Python
+Framework de desenvolvimento web: Flask ou Django
+Banco de dados: PostgreSQL ou SQLite (dependendo da escala)
+Biblioteca para integração com exchanges: CCXT
+Biblioteca para análise técnica: TA-Lib
+Sistema de versionamento: Git
+Ferramenta de CI/CD: Jenkins ou GitHub Actions
+
+#####################################################################################################################################################################################################################################
+
+
+4 Aćao: Criar o esqueleto da aplicação e integração básica com uma exchange de criptoativos.
+
+Configuração do ambiente de desenvolvimento:
+
+Instalação de dependências
+Configuração do repositório Git
+Configuração do ambiente virtual Python
+Desenvolvimento da integração básica com uma exchange (por exemplo, Binance) utilizando a biblioteca CCXT:
+
+Autenticação
+Recuperação de saldo
+Listagem de pares de negociação
+Execução de ordens
+Interface básica para visualização do saldo e execução de ordens.
+
+Use o comando pwd no $ do linux para verificar se estar na pasta de usuario local, em geral /home/<nome_de_usuario/ (área do projeto) 
+Note: Observe que todo o codigo abaixo deve rodar dentro da pasta /home/<nome_de_usuario>/trading/trading. 
+
+Etapa 1: 
+1.1. Instalação de dependências:
+
+Crie um ambiente virtual para isolar as dependências do projeto.
+
+pip install virtualenv
+virtualenv venv
+source venv/bin/activate  # No Windows, use: venv\Scripts\activate
 
 
 
